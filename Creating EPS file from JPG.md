@@ -12,6 +12,7 @@ I found a nice utility [vtracer https://github.com/visioncortex/vtracer] for tra
 
 Here is the **python** code I wrote to convert the PNGs and JPGs of my logo to .svg format:
 
+```
   import os
   import vectortrace as vt
   def convertdir(dir):
@@ -26,6 +27,8 @@ Here is the **python** code I wrote to convert the PNGs and JPGs of my logo to .
   convertdir("/Users/sandeep/Downloads/terno_final_4/Logo/JPG")
   convertdir("/Users/sandeep/Downloads/terno_final_4/Logo/PNG")
 
+```
+
 3. Install Inkscape
 
 Download and install Inkscape: https://inkscape.org/
@@ -34,11 +37,13 @@ Download and install Inkscape: https://inkscape.org/
 
 I went to into each of my directories containing JPGs and PNGs to convert .svg to .eps. Here is the ```bash``` code:
 
+```
   cd /Users/sandeep/Downloads/terno_final_4/Logo/JPG
   for i in *.svg
   do
       inkscape -w 300 -h 300 --export-filename=$i.eps $i
   done
+```
 
 5. That's. You would find the ```.eps``` files in the folder.
 
